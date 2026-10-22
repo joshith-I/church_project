@@ -1,0 +1,126 @@
+/*About page CSS*/
+div.about,
+.about2,
+.about3,
+.about4 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 5px 20px;
+    padding: 0 20px 0 20px;
+    color: black;
+}
+
+div.about h1,
+.about2 h1,
+.about3 h1,
+.about4 h1 {
+    flex: 0 0 100%;
+    margin-bottom: 0;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    color: rgb(207, 30, 30);
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.img1, .img2, .img3, .img4 {
+    flex: 0 0 300px;
+    width: auto;
+    max-width: 100%;
+    margin: 5px 0 0 20px;
+}
+
+.img1 img, .img2 img, .img3 img, .img4 img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.saint, .pic2, .pic3, .pic4 {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    margin: 5px 0 0 0;
+    display: block;
+    padding: 5px 10px;
+    border: 3px solid black;
+    text-align: justify;
+    font-size: 15.5px;
+    color: black;
+}
+
+.saint p,
+.pic2 p,
+.pic3 p,
+.pic4 p {
+    line-height: 1.5;
+    color: black;
+    font-weight: 800;
+    margin: 0;
+}
+
+.info-section {
+    background-color: rgb(207, 30, 30);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.info-box h2 {
+    color: goldenrod;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.info-box p {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 5px 0 0;
+}
+
+@media (max-width: 900px) {
+    div.about h1, .about2 h1, .about3 h1, .about4 h1 {
+        padding-left: 20px;
+        font-size: 24px;
+    }
+
+    div.about, .about2, .about3, .about4 {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        padding-right: 20px;
+    }
+
+    .img1, .img2, .img3, .img4 {
+        flex: 0 0 auto;
+        margin: 5px 0 0 0;
+        max-width: 420px;
+    }
+
+    .img1 img, .img2 img, .img3 img, .img4 img {
+        height: 240px;
+    }
+
+    .saint, .pic2, .pic3, .pic4 {
+        flex: 0 0 auto;
+        margin: 10px 0 0 0;
+        text-align: left;
+    }
+
+    .info-section {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .saint, .pic2, .pic3, .pic4 {
+        font-size: 15px;
+    }
+}

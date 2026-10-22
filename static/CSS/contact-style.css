@@ -1,0 +1,271 @@
+/*contact CSS*/
+.contactus {
+    font-size: 24px;
+    color: brown;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.line1 {
+    font-size: 40px;
+    margin-bottom: -20px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(207, 30, 30);
+    border: 3px solid goldenrod;
+    color: white;
+    margin: 0 200px 75px 200px;
+    align-items: stretch;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.d1, .d2, .d3, .d4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-wrap: anywhere;
+}
+
+.d1 {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid gold;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.details .c {
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: -5px;
+}
+
+.d2 {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid gold;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.d3 {
+    flex: 1.6;
+    padding: 15px;
+    border: 2px solid gold;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.d4 {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid gold;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.d1:hover, .d2:hover, .d3:hover, .d4:hover {
+    color: gold;
+    background-color: brown;
+    border: 2px solid white;
+    transform: translateY(-5px);
+}
+
+.priestcontact {
+    display: block;
+    padding-left: 20px;
+}
+
+.contact1 {
+    text-align: center;
+}
+
+.priestcontact img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border-style: double;
+    border-color: goldenrod;
+    border-width: 7px;
+}
+
+.priestcontact h2,
+.priestcontact h3,
+.priestcontact p,
+.assistcontact h2,
+.assistcontact h3,
+.assistcontact p,
+.secratrycontact h2,
+.secratrycontact h3,
+.secratrycontact p,
+.treasurercontact h2,
+.treasurercontact h3,
+.treasurercontact p {
+    color: black;
+    text-align: center;
+}
+
+.othercontact {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.assistcontact,
+.secratrycontact,
+.treasurercontact {
+    padding-left: 20px;
+}
+
+.assistcontact img,
+.secratrycontact img,
+.treasurercontact img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border-style: double;
+    border-color: silver;
+    border-width: 7px;
+}
+
+.find-us-section {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.find-us-section h2 {
+    color: rgb(150, 30, 30);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.find-us-card {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    background-color: blanchedalmond;
+    border: 2px solid goldenrod;
+    border-radius: 16px;
+    padding: 10px;
+    gap: 10px;
+    width: 85%;
+    max-width: 850px;
+    margin: 0 auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.map-box {
+    width: 68%;
+    height: 250px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.address-box {
+    width: 32%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.address-box h3 {
+    margin: 0 0 8px 0;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.address-box p {
+    margin: 2px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.address-box .pincode {
+    margin-bottom: 12px;
+}
+
+.directions-btn {
+    display: inline-block;
+    width: fit-content;
+    background-color: rgb(150, 30, 30);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.directions-btn:hover {
+    background-color: rgb(207, 30, 30);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1300px) {
+    .details {
+        flex-wrap: wrap;
+        margin: 0 40px 50px;
+        gap: 15px 0;
+    }
+
+    .d1, .d2, .d3, .d4 {
+        flex: 1 1 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .line1 {
+        font-size: 30px;
+    }
+
+    .details {
+        margin: 0 15px 40px;
+        padding: 15px;
+    }
+
+    .d1, .d2, .d3, .d4 {
+        flex: 1 1 100%;
+        margin: 0;
+    }
+
+    .priestcontact {
+        padding-left: 0;
+    }
+
+    .find-us-card {
+        flex-direction: column;
+        width: 92%;
+    }
+
+    .map-box, .address-box {
+        width: 100%;
+    }
+
+    .map-box {
+        height: 250px;
+    }
+}

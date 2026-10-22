@@ -1,0 +1,216 @@
+.welcome {
+    text-align: center;
+}
+
+.welcome h2 {
+    font-size: 24px;
+    color: black;
+}
+
+.welcome p {
+    color: black;
+    font-size: 18px;
+}
+
+.mass-button {
+    background-color: brown;
+    padding: 12px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: gold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+}
+
+.mass-button p {
+    margin: 2px 0;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.mass-button:hover {
+    background-color: rgb(207, 30, 30);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.button-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    min-width: 160px;
+    align-self: flex-start;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.hero-image {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    height: auto;
+    max-height: 700px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.image_priest {
+    display: inline-block;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+.image_priest img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.message {
+    padding: 10px;
+    border: 2px solid black;
+    width: min(850px, calc(100% - 520px));
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 50px;
+    margin-left: 30px;
+    text-align: justify;
+    font-size: 23px;
+    color: black;
+}
+
+.message p {
+    line-height: 1.6;
+    color: black;
+}
+
+.timings-row {
+    background-color: rgb(207, 30, 30);
+    color: gold;
+    padding: 60px;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.timings-row div {
+    margin-bottom: 10px;
+    line-height: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 180px;
+}
+
+.Mass-timings {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    padding-left: 60px;
+}
+
+.day {
+    display: inline-block;
+    min-width: 250px;
+    font-size: 21px;
+    font-weight: bold;
+    padding-left: 60px;
+}
+
+.time {
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+}
+
+.timings-row hr {
+    opacity: 0.4;
+    flex: 0 0 100%;
+    margin: 0 0 0 60px;
+}
+
+@media (max-width: 1000px) {
+    .image_priest {
+        display: block;
+        margin: 30px auto 0;
+        text-align: center;
+    }
+
+    .message {
+        display: block;
+        width: auto;
+        margin: 30px 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-container .left-buttons {
+        display: none;
+    }
+
+    .hero-container .button-stack {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .image_priest img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .message {
+        font-size: 18px;
+    }
+
+    .timings-row {
+        padding: 30px 15px;
+    }
+
+    .Mass-timings {
+        padding-left: 0;
+        font-size: 24px;
+    }
+
+    .timings-row div {
+        padding-right: 0;
+    }
+
+    .day {
+        min-width: 0;
+        padding-left: 0;
+        font-size: 18px;
+    }
+
+    .time {
+        font-size: 18px;
+    }
+
+    .timings-row hr {
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,124 @@
+.movement {
+    text-align: center;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.movement h2 {
+    font-size: 30px;
+    color: brown;
+}
+
+.mlist {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto 40px;
+    box-sizing: border-box;
+}
+
+.m1, .m2, .m3, .m4, .m5, .m6 {
+    text-align: center;
+    color: black;
+    width: 31%;
+}
+
+.m1 img, .m2 img, .m3 img, .m4 img, .m5 img, .m6 img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 3px solid goldenrod;
+    box-sizing: border-box;
+}
+
+.m1:hover, .m2:hover, .m3:hover, .m4:hover, .m5:hover, .m6:hover {
+    transform: translateY(-2px);
+    opacity: 0.8;
+    background-color: wheat;
+}
+
+.m1 h1, .m2 h1, .m3 h1, .m4 h1, .m5 h1, .m6 h1 {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.movement-link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+
+.movement-link span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    font-size: 16px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.movement-link:hover span {
+    opacity: 1;
+}
+
+.movement-details {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px 40px;
+    color: black;
+}
+
+.movement-details h2 {
+    text-align: center;
+    color: brown;
+    margin-bottom: 20px;
+}
+
+.movement-details img {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border: 4px solid goldenrod;
+    margin: 0 auto 20px;
+}
+
+.movement-details p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: brown;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .mlist {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .m1, .m2, .m3, .m4, .m5, .m6 {
+        width: 100%;
+        max-width: 420px;
+        margin-bottom: 30px;
+    }
+
+    .m1 img, .m2 img, .m3 img, .m4 img, .m5 img, .m6 img {
+        height: 240px;
+    }
+}
