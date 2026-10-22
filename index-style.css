@@ -11,11 +11,11 @@
 }
 
 .mass-button {
-    background-color: brown;
+    background-color: gold;
     padding: 12px 18px;
     border-radius: 12px;
     text-decoration: none;
-    color: gold;
+    color: rgb(207, 30, 30);
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: block;
@@ -26,7 +26,7 @@
     font-weight: bold;
     line-height: 1.2;
 }
-.mass-button:hover {background-color: rgb(207, 30, 30);
+.mass-button:hover {background-color: gold;
     color: white;
     transform: translateY(-2px);
 }
@@ -92,8 +92,8 @@
     color: black;
 }
 .timings-row{
-    background-color:rgb(207, 30, 30);
-    color:gold;
+    background-color:gold;
+    color:rgb(207, 30, 30);
     padding:60px;
     width: 100%;
     margin-top: 50px;
@@ -137,6 +137,7 @@
 /*Footer*/
 .footer{
     background-color: black;
+    color:black;
     text-align:center;
     padding-top:20px;
     padding-bottom: 20px;
