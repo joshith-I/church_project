@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/CSS/gallery style.css">
+        <link rel="stylesheet" href="static/CSS/style.css">
+
+        <title>ST.JOSEPH'S CHURCH KALIMAR</title>
+    </head>
+    <body>
+        <header class="Name">
+            <div>
+                <h1 >ST.JOSEPH'S CHURCH, KALIMAR</h1>
+            </div>
+            <nav class="navigation">
+                <a class="home" href="church_index.html">Home</a>
+                <a class="about" href="about.html">About</a>
+                <div class="dropdown">
+                    <a class="councils" href="#" onclick="toggleDropdown(event)">Councils</a>
+                    <div class="dropdown-content" id="councilsDropdown">
+                    <a href="movement.html">Movements</a>
+                    <a href="associations.html">Associations</a>
+                    </div>
+                </div>
+                <a class="gallery" href="gallery.html">Gallery</a>
+                <a class="contact" href="contact.html">Contact</a>
+            </nav>
+        </header> 
+<main class="gallery-wrapper">
+    <div class="gallery-heading">
+        <h2>Our Gallery</h2>
+        <p>Moments and memories from our church</p>
+    </div>
+    <!-- ================= CHURCH INTERIOR ================= -->
+    <section class="gallery-section">
+        <h3>CHURCH INTERIOR</h3>
+        <div class="photo-grid">
+            <img src="images/interior1.jpg"
+                 alt="Church Interior"
+                 onclick="openImage(this.src)">
+            <img src="images/interior2.jpg"
+                 alt="Church Interior"
+                 onclick="openImage(this.src)">
+            <img src="images/interior3.jpg"
+                 alt="Church Interior"
+                 onclick="openImage(this.src)">
+            <img src="images/interior4.jpg"
+                 alt="Church Interior"
+                 onclick="openImage(this.src)">
+            <img src="images/interior5.jpg"
+                 alt="Church Interior"
+                 onclick="openImage(this.src)">
+        </div>
+    </section>
+    <!-- ================= CHURCH EXTERIOR ================= -->
+    <section class="gallery-section">
+        <h3>CHURCH EXTERIOR</h3>
+        <div class="photo-grid">
+            <img src="images/exterior1.jpg"
+                 alt="Church Exterior"
+                 onclick="openImage(this.src)">
+            <img src="images/exterior2.jpg"
+                 alt="Church Exterior"
+                 onclick="openImage(this.src)">
+            <img src="images/exterior3.jpg"
+                 alt="Church Exterior"
+                 onclick="openImage(this.src)">
+            <img src="images/exterior4.jpg"
+                 alt="Church Exterior"
+                 onclick="openImage(this.src)">
+        </div>
+    </section>
+    <!-- ================= FEAST / FESTIVAL ================= -->
+    <section class="gallery-section">
+        <h3>FEAST / FESTIVAL</h3>
+        <div class="photo-grid">
+            <img src="images/feast1.jpg"
+                 alt="Church Feast"
+                 onclick="openImage(this.src)">
+            <img src="images/feast2.jpg"
+                 alt="Church Feast"
+                 onclick="openImage(this.src)">
+            <img src="images/feast3.jpg"
+                 alt="Church Feast"
+                 onclick="openImage(this.src)">
+            <img src="images/feast4.jpg"
+                 alt="Church Feast"
+                 onclick="openImage(this.src)">
+        </div>
+    </section>
+    <!-- ================= CHRISTMAS ================= -->
+    <section class="gallery-section">
+        <h3>CHRISTMAS</h3>
+        <div class="photo-grid">
+            <img src="images/christmas1.jpg"
+                 alt="Christmas Celebration"
+                 onclick="openImage(this.src)">
+            <img src="images/christmas2.jpg"
+                 alt="Christmas Celebration"
+                 onclick="openImage(this.src)">
+            <img src="images/christmas3.jpg"
+                 alt="Christmas Celebration"
+                 onclick="openImage(this.src)">
+            <img src="images/christmas4.jpg"
+                 alt="Christmas Celebration"
+                 onclick="openImage(this.src)">
+            <img src="images/christmas5.jpg"
+                 alt="Christmas Celebration"
+                 onclick="openImage(this.src)">
+        </div>
+    </section>
+
+    <div id="imagePopup" class="image-popup" onclick="closeImage()">
+        <span class="close-popup">&times;</span>
+        <img id="popupImage" src="" alt="Gallery Image">
+    </div>
+</main>
+   <div class="footer">
+        <p>Copyright &copy; 2026 St. Joseph's Church, Kalimar. All rights reserved.</p>
+        <p>Designed by I. Joshith</p>
+        <p>Contact us at +91 98422 72259</p>
+        <p>Email us at : stjosephkalimar@gmail.com</p>
+    </div>
+        <script src="static/JS/script.js"></script>
+    </body>
+</html>
