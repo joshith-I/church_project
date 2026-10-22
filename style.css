@@ -1,0 +1,112 @@
+/*Basic all page CSS*/
+html {
+    scroll-behavior: smooth; /* Smooth-ah scroll aaga */
+}
+/* Padding/borders no longer add to declared widths (fixes width:100% + padding overflow) */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+body{
+    margin: 0;
+    background-color: blanchedalmond;
+    color: gold;
+    /* removed blanket overflow-x:hidden - it only hid the overflow; real sources are fixed instead */
+}
+
+.Name{
+    background-color: rgb(207, 30, 30);
+    padding: 40px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Navigation CSS*/
+.navigation{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+    font-size: 24px;
+}
+.navigation .councils{
+    cursor: pointer;
+}
+.navigation a{
+text-decoration:none;
+color:gold;
+font-weight:500;
+}
+
+.navigation a:hover,
+.navigation .councils a:hover{
+color:white;
+transform:translateY(-2px);
+}
+
+/*Dropdown CSS*/
+.navigation .dropdown{
+    display: inline-block;
+    position: relative;
+
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background-color: rgb(207, 30, 30);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+.dropdown-content a{
+    color: gold;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{
+    background-color: #5c221e;
+}
+.dropdown-content.show{
+    display: block;
+}
+
+/*Footer*/
+.footer{
+    background-color: black;
+    text-align:center;
+    padding: 20px 15px;
+    width:100%;
+    margin-top:20px;
+}
+
+
+/*Responsive header*/
+@media (max-width: 768px){
+    .Name{
+        padding: 20px 15px;
+        justify-content: center;
+        text-align: center;
+    }
+    .Name h1{
+        font-size: 22px;
+        margin: 0;
+    }
+    .navigation{
+        justify-content: center;
+        gap: 8px 18px;
+        font-size: 18px;
+    }
+}
+
+/*Visible keyboard focus*/
+a:focus-visible, button:focus-visible, img[tabindex]:focus-visible{
+    outline: 3px solid #1a1a1a;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px #fff;
+}

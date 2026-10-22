@@ -1,0 +1,290 @@
+/*About page CSS*/
+/*Section 1*/
+div.about{
+    padding-left: 20px;
+    color: black;
+}
+div.about h1{
+    padding-left: 20px;
+     padding-bottom: 10px;
+    color: rgb(207, 30, 30);
+    font-size: 27px;
+    font-weight: bold;
+
+}
+.img1{
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 20%;
+}
+
+.img1 img{
+    width: 300px;
+    height: 300px;
+    object-fit:cover;
+}
+.saint{
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 3px solid;
+    border-color: black;
+    width: 72%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+    margin-left: 30px;
+    text-align: justify;
+    font-size: 15.5px; 
+    color: black;
+}
+
+.saint p{
+    line-height:1.5;
+    color: black;
+    font-weight: 800;
+}
+
+/*Section 2*/
+.about2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    color: black;
+}
+.about2 h1{
+    padding-left: 75%;
+    padding-bottom: 10px;
+    color: rgb(207, 30, 30);
+    font-size: 27px;
+    font-weight: bold;
+
+}
+.img2 {
+    display: inline-block;
+    vertical-align: top; 
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 20%;
+}
+
+.img2 img {
+    width: 300px;
+    height: 270px;
+    object-fit:cover;
+}
+
+.pic2 {
+    padding: 5px 10px;
+    border: 3px solid black;
+    width: 72%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+    margin-left: 20px; 
+    text-align: justify;
+    font-size: 15.5px; 
+    color: black;
+}
+
+.pic2 p {
+    line-height: 1.5;
+    color: black;
+    font-weight: 800;
+    margin: 0;
+}
+
+/*Section 3*/
+.about3{
+    margin-bottom: 20px;
+    padding-left: 20px;
+    color: black;
+}
+.about3 h1{
+    padding-left: 20px;
+    padding-bottom: 10px;
+    color: rgb(207, 30, 30);
+    font-size: 27px;
+    font-weight: bold;
+}
+.img3 {
+    display: inline-block;
+    vertical-align: top; 
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 20%;
+}
+.img3 img {
+    width: 300px;
+    height: 272px;
+    object-fit:cover;
+}
+.pic3 {
+    padding: 5px 10px;
+    border: 3px solid black;
+    width: 72%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+    margin-left: 20px; 
+    text-align: justify;
+    font-size: 15.5px; 
+    color: black;
+}
+.pic3 p {
+    line-height: 1.5;
+    color: black;
+    font-weight: 800;
+    margin: 0;
+}
+
+/*Section 4*/
+.about4{
+    margin-bottom: 20px;
+    padding-left: 20px;
+    color: black;
+}
+.about4 h1{
+    padding-left: 75%;
+    padding-bottom: 10px;
+    color: rgb(207, 30, 30);
+    font-size: 27px;
+    font-weight: bold;
+}
+.img4 {
+    display: inline-block;
+    vertical-align: top; 
+    margin-left: 20px;
+    margin-top: 5px;
+    width: 20%;
+}
+.img4 img {
+    width: 300px;
+    height: 272px;
+    object-fit:cover;
+}
+.pic4 {
+    padding: 5px 10px;
+    border: 3px solid black;
+    width: 72%;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+    margin-left: 20px; 
+    text-align: justify;
+    font-size: 15.5px; 
+    color: black;
+}
+.pic4 p {
+    line-height: 1.5;
+    color: black;
+    font-weight: 800;
+    margin: 0;
+}
+
+/*Information*/
+.info-section{
+    background-color: rgb(207, 30, 30);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+.info-box h2{
+    color: goldenrod;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0px;
+}
+.info-box p{
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 5px 0 0 0;
+}
+/*Footer*/
+.footer{
+    background-color: black;
+    text-align:center;
+    padding-top:20px;
+    padding-bottom: 20px;
+    width:100%;
+    margin-top:20px;
+}
+
+
+/* ---- Layout fix: sections as a wrapping flex row (DOM order kept: image/text alternate) ---- */
+div.about, .about2, .about3, .about4{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 5px 20px;
+    padding-right: 20px;
+}
+div.about h1, .about2 h1, .about3 h1, .about4 h1{
+    flex: 0 0 100%;
+    margin-bottom: 0;
+}
+.img1, .img2, .img3, .img4{
+    flex: 0 0 300px;
+    width: auto;
+    max-width: 100%;
+    margin: 5px 0 0 20px;
+}
+.img1 img, .img2 img, .img3 img, .img4 img{
+    display: block;
+    width: 100%;
+}
+.saint, .pic2, .pic3, .pic4{
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    margin: 5px 0 0 0;
+    display: block;
+}
+.about2 .pic2, .about4 .pic4{
+    margin-left: 20px;
+}
+
+@media (max-width: 900px){
+    div.about h1, .about2 h1, .about3 h1, .about4 h1{
+        padding-left: 20px;
+        font-size: 24px;
+    }
+    div.about, .about2, .about3, .about4{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        padding-right: 20px;
+    }
+    .img1, .img2, .img3, .img4{
+        flex: 0 0 auto;
+        margin: 5px 0 0 0;
+        max-width: 420px;
+    }
+    .img1 img, .img2 img, .img3 img, .img4 img{
+        height: 240px;
+    }
+    .saint, .pic2, .pic3, .pic4{
+        flex: 0 0 auto;
+        margin: 10px 0 0 0;
+        text-align: left;
+    }
+    .about2, .about4{
+        /* keep image after text (DOM order) but show the picture first on small screens */
+    }
+    .about2 .img2, .about4 .img4{
+        order: 1;
+    }
+    .info-section{
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+@media (max-width: 480px){
+    .saint, .pic2, .pic3, .pic4{
+        font-size: 15px;
+    }
+}
