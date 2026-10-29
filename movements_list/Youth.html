@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/CSS/movements_list/youth.css">
+    <link rel="stylesheet" href="../static/CSS/style.css">
+
+    <title data-i18n="title.youth">Youth Movement | St. Joseph's Church, Kalimar</title>
+    <script src="../static/JS/translations.js" defer></script>
+    <script src="../static/JS/i18n.js" defer></script>
+</head>
+
+<body>
+    <header class="Name">
+        <div class="church-brand">
+            <div class="logo">
+                <img src="../images/logo.jpeg" alt="Church logo" data-i18n-alt="alt.logo">
+            </div>
+            <h1 data-i18n="brand.name">ST. JOSEPH'S CHURCH, KALIMAR</h1>
+        </div>
+        <nav class="navigation" aria-label="Main">
+            <a class="home" href="../index.html" data-i18n="nav.home">Home</a>
+            <a class="about" href="../about.html" data-i18n="nav.about">About</a>
+            <div class="dropdown">
+                <a class="councils" href="#" onclick="toggleDropdown(event)" data-i18n="nav.councils">Councils</a>
+                <div class="dropdown-content" id="councilsDropdown">
+                    <a href="../movement.html" data-i18n="nav.movements">Movements</a>
+                    <a href="../associations.html" data-i18n="nav.associations">Associations</a>
+                </div>
+            </div>
+            <a class="gallery" href="../gallery.html" data-i18n="nav.gallery">Gallery</a>
+            <a class="contact" href="../contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="youth_container">
+        <h2 class="youth_title" data-i18n="youth.title">Youth Movement</h2>
+        <div class="youth_image">
+            <img src="../images/youth team.jpg" alt="Youth team" data-i18n-alt="alt.youthTeam">
+        </div>
+
+        <p class="title" data-i18n="youth.aboutTitle">About the movement</p>
+        <p class="about_para" data-i18n="youth.aboutBody">The Youth Movement of St. Joseph Church, Kalimar, is a
+            community of young people committed to growing in faith, serving others, and developing themselves as
+            responsible Christian leaders. Through regular gatherings and activities, the movement encourages young
+            people to deepen their relationship with Christ while actively participating in the life and mission of the
+            parish. The movement seeks to create an environment where young people can learn, serve, support one
+            another, and use their talents for the good of the church and society.</p>
+
+        <p class="title" data-i18n="youth.mvTitle">Mission &amp; Vision</p>
+        <div class="mv">
+            <div class="mission">
+                <h3 data-i18n="youth.mission">Mission</h3>
+                <p data-i18n="youth.missionBody">The mission of the Youth Movement is to nurture young people in
+                    Christian faith and values while helping them develop positive attitudes towards God, others, and
+                    society.</p>
+            </div>
+            <div class="vision">
+                <h3 data-i18n="youth.vision">Vision</h3>
+                <p data-i18n="youth.visionBody">The Youth Movement envisions a generation of young adults who grow with
+                    a strong foundation in faith, compassion, discipline, and love for others.</p>
+            </div>
+        </div>
+
+        <div class="activities"></div>
+        <div class="close"></div>
+    </div>
+
+    <div class="footer">
+        <p data-i18n="footer.copyright">Copyright &copy; 2026 St. Joseph's Church, Kalimar. All rights reserved.</p>
+        <p><span data-i18n="footer.designed">Designed by</span> I. Joshith</p>
+        <p><span data-i18n="footer.call">Contact us at</span> +91 98422 72259</p>
+        <p><span data-i18n="footer.email">Email us at:</span> stjosephkalimar@gmail.com</p>
+    </div>
+    <script src="../static/JS/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,290 @@
+/* Colour tokens - the one place the site's palette is defined */
+:root{
+    --c-blue: #1e3a5f;        /* Sanctuary Blue: header, footer, contact strip */
+    --c-blue-deep: #081d39;   /* hover state on blue panels */
+    --c-gold: #c59b27;        /* muted gold: title, links on blue, focus ring */
+    --c-gold-bright: gold;    /* bright gold: buttons, timings band */
+    --c-goldenrod: goldenrod; /* borders and frames */
+    --c-heading: brown;       /* page and section headings */
+    --c-red: rgb(207, 30, 30);
+    --c-red-dark: rgb(150, 30, 30); /* buttons, text on gold */
+    --c-text: #2a1e17;        /* body text */
+    --c-muted: #666666;
+    --c-cream: #fffdf9;
+    --c-cream-accent: blanchedalmond;
+}
+
+/*Basic all page CSS*/
+
+html {
+    scroll-behavior: smooth; /* Smooth-ah scroll aaga */
+}
+
+/* Padding/borders no longer add to declared widths (fixes width:100% + padding overflow) */
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+.church-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+body{
+    margin: 0;
+    background-color: var(--c-cream); /* Soft Altar Cream background */
+    color: var(--c-text);      /* Deep Roasted Espresso for readable body paragraphs */
+    font-family: system-ui, -apple-system, sans-serif; /* Clean readable font stack */
+}
+
+.Name{
+    background-color: var(--c-blue); /* Sanctuary Blue Header */
+    position: relative; /* anchor for the language switcher */
+    padding: 40px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Target the Church Title H1 inside .Name specifically */
+.Name h1, .Name .logo-text {
+    color: var(--c-gold); /* Muted Gold for the main church title */
+    margin: 0;
+}
+
+/*Navigation CSS*/
+.navigation{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+    font-size: 24px;
+}
+
+.navigation .councils{
+    cursor: pointer;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #ffffff; /* White links for crisp visibility on blue background */
+    font-weight: 500;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.navigation a:hover,
+.navigation .councils a:hover{
+    color: var(--c-gold); /* Turns gold when you hover over it */
+    transform: translateY(-2px);
+}
+
+/*Dropdown CSS*/
+.navigation .dropdown{
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background-color: var(--c-blue); /* Matches header blue */
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    border: 1px solid var(--c-gold); /* Fine gold border accent */
+}
+
+.dropdown-content a{
+    color: #ffffff; /* Clean white dropdown text */
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+
+.dropdown-content a:hover{
+    background-color: var(--c-gold); /* Changes background to gold on hover */
+    color: var(--c-blue);      /* Text switches to deep blue for readability */
+}
+
+.dropdown-content.show{
+    display: block;
+}
+
+/*Footer*/
+.footer{
+    background-color: var(--c-blue); /* Sanctuary Blue matching the top header */
+    color: #ffffff;            /* White text for general copyright details */
+    text-align: center;
+    padding: 30px 15px;
+    width: 100%;
+    margin-top: 40px;
+    border-top: 4px solid var(--c-gold); /* Gold accent line above the footer */
+}
+
+/* Accent contact links inside the footer */
+.footer a {
+    color: var(--c-gold); /* Muted Gold for email and phone links */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+
+/*Tamil text: system Tamil fonts (no download) and a taller line-height so stacked glyphs are not clipped*/
+html[lang="ta"] body{
+    font-family: system-ui, -apple-system, "Noto Sans Tamil", "Nirmala UI", "Latha", "Tamil Sangam MN", sans-serif;
+    line-height: 1.6;
+}
+html[lang="ta"] .Name h1{
+    line-height: 1.35;
+}
+
+/*Language switcher: small text-only "EN | தமிழ்" in the header's top-right corner.
+  Absolutely positioned inside the header so it never changes the header height or
+  pushes the logo / title / navigation around.*/
+.lang-switch{
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 14px;
+    line-height: 1;
+    color: #ffffff;
+    z-index: 5;
+}
+.lang-switch button{
+    font: inherit;
+    color: #ffffff;
+    background: none;
+    border: 0;
+    padding: 10px 8px;      /* ~32px tall tap area without growing the header */
+    min-width: 36px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.lang-switch button[aria-pressed="true"]{
+    color: var(--c-gold);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+.lang-switch button:hover{
+    color: var(--c-gold);
+}
+.lang-switch button:focus-visible{
+    outline-color: var(--c-gold);
+    box-shadow: none;
+}
+.lang-switch span{
+    opacity: 0.6;
+}
+
+/*Responsive header*/
+@media (max-width: 768px){
+    .Name{
+        padding: 32px 15px 12px; /* 32px top = room for the switcher strip; was 20px 15px (net +4px) */
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .Name h1{
+        font-size: 22px;
+        margin: 0;
+    }
+    
+    .navigation{
+        justify-content: center;
+        gap: 8px 18px;
+        font-size: 18px;
+    }
+
+    .church-brand {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .lang-switch{
+        top: 2px;
+        right: 8px;
+        font-size: 13px;
+    }
+    .lang-switch button{
+        padding: 7px 8px;
+    }
+    /* Tamil glyphs are wider; a touch smaller title keeps the header from growing a line */
+    html[lang="ta"] .Name h1{
+        font-size: 19px;
+    }
+
+/*Dropdown CSS*/
+.navigation .dropdown{
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the dropdown nicely under 'Councils' */
+    background-color: var(--c-blue); /* Matches header blue */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    border: 1px solid var(--c-gold); /* Fine gold border accent */
+    text-align: center;
+}
+
+.dropdown-content a{
+    color: #ffffff; /* Clean white dropdown text */
+    padding: 12px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.dropdown-content a:hover{
+    background-color: var(--c-gold); /* Changes background to gold on hover */
+    color: var(--c-blue);      /* Text switches to deep blue for readability */
+}
+
+.dropdown-content.show{
+    display: block;
+}
+
+}
+
+/*Visible keyboard focus for accessibility*/
+a:focus-visible, button:focus-visible, select:focus-visible, img[tabindex]:focus-visible{
+    outline: 3px solid var(--c-gold); /* Gold focus ring */
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px var(--c-cream);
+}

@@ -1,0 +1,142 @@
+/*About page CSS*/
+/*
+ * Four alternating sections share the same rules:
+ *   .about / .about2 / .about3 / .about4  = section
+ *   .img1-.img4                           = photo box
+ *   .saint, .pic2, .pic3, .pic4           = text box
+ * One gutter value keeps the heading, photo and text on the same left edge.
+ */
+:root{
+    --about-gutter: 40px;
+}
+
+div.about, .about2, .about3, .about4{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 5px 20px;
+    padding: 0 var(--about-gutter);
+    color: var(--c-text);
+}
+.about2{
+    margin: 50px 0;
+}
+.about3, .about4{
+    margin-bottom: 20px;
+}
+
+div.about h1, .about2 h1, .about3 h1, .about4 h1{
+    flex: 0 0 100%;
+    margin: 0.67em 0 10px;
+    color: var(--c-heading);
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* photo */
+.img1, .img2, .img3, .img4{
+    flex: 0 0 300px;
+    max-width: 100%;
+    margin: 5px 0 0;
+}
+.img1 img, .img2 img, .img3 img, .img4 img{
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border: 3px solid var(--c-goldenrod);
+}
+
+/* text box */
+.saint, .pic2, .pic3, .pic4{
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 5px 0 0;
+    padding: 10px 15px;
+    border: 3px solid var(--c-goldenrod);
+    text-align: justify;
+    font-size: 16px;
+    color: var(--c-text);
+}
+.saint p, .pic2 p, .pic3 p, .pic4 p{
+    line-height: 1.6;
+    color: var(--c-text);
+    font-weight: normal;
+    margin: 0;
+}
+
+/*Information*/
+.info-section{
+    background-color: var(--c-red);
+    border: 3px solid var(--c-goldenrod);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+.info-box h2{
+    color: var(--c-gold-bright);
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0px;
+}
+.info-box p{
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 5px 0 0 0;
+}
+
+/*Tablet and phone: one column. Photo and text both span the full width of the
+  same gutter, so their edges line up with the heading above them.*/
+@media (max-width: 900px){
+    :root{
+        --about-gutter: 20px;
+    }
+    div.about h1, .about2 h1, .about3 h1, .about4 h1{
+        font-size: 24px;
+    }
+    div.about, .about2, .about3, .about4{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        gap: 12px;
+    }
+    .about2{
+        margin: 35px 0;
+    }
+    .img1, .img2, .img3, .img4{
+        flex: 0 0 auto;
+        max-width: none;
+        margin: 0;
+    }
+    .img1 img, .img2 img, .img3 img, .img4 img{
+        height: auto;
+        aspect-ratio: 16 / 10;
+        max-height: 340px;
+    }
+    .saint, .pic2, .pic3, .pic4{
+        flex: 0 0 auto;
+        margin: 0;
+        text-align: left;
+    }
+    .info-section{
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+@media (max-width: 480px){
+    .saint, .pic2, .pic3, .pic4{
+        font-size: 15px;
+    }
+    .info-box h2{
+        font-size: 34px;
+    }
+}
+
+/*Tamil: slightly roomier lines; justified text leaves wide gaps in Tamil, so keep it left-aligned*/
+html[lang="ta"] .saint, html[lang="ta"] .pic2, html[lang="ta"] .pic3, html[lang="ta"] .pic4{
+    text-align: left;
+}

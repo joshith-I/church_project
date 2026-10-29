@@ -1,0 +1,244 @@
+.welcome{
+    text-align: center;  
+}
+.welcome h2{
+    font-size: 24px;
+    color: var(--c-text);
+}
+.welcome p{
+    color: var(--c-text);
+    font-size: 18px;
+}
+
+.mass-button {
+    background-color: var(--c-gold-bright);
+    padding: 12px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--c-red-dark); /* darker red: 5.8:1 on gold (was 3.6:1) */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+    
+.mass-button p {
+    margin: 2px 0;
+    font-weight: bold;
+    line-height: 1.2;
+}
+.mass-button:hover {
+    background-color: var(--c-red-dark); /* white-on-gold was unreadable (1.4:1) */
+    color: white;
+    transform: translateY(-2px);
+}
+.mass-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+.button-stack {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column; /* Keela keela dynamic-a buttons add aagum */
+    gap: 15px;
+    min-width: 160px;
+    align-self: flex-start; /* replaces the margin-top:-500px hack that dragged the button out of the layout */
+}
+
+/* Mobile flat button grid — hidden on desktop, shown on mobile */
+.buttons-grid-mobile {
+    display: none;
+}
+/*Main image CSS*/
+.hero-container {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap: 20px;
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+.hero-image {
+    flex: 1 1 auto;
+    min-width: 0; /* lets the image shrink inside the flex row instead of pushing the page wider */
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    height: auto;
+    max-height: 700px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/*Priest image CSS*/
+.image_priest{
+    display: inline-block;
+    margin-left: 120px;
+    margin-top: 50px;
+}
+.image_priest img{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit:cover;
+}
+.message{
+    padding: 10px;
+    border: 2px solid var(--c-goldenrod);
+    width: min(850px, calc(100% - 520px));
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 50px;
+    margin-left: 30px;
+    text-align: justify;
+    font-size: 23px; 
+    color: var(--c-text);
+}
+.message p{
+    line-height:1.6;
+    color: var(--c-text);
+}
+.timings-row{
+    background-color: var(--c-gold-bright);
+    color: var(--c-red-dark);
+    padding:60px;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.timings-row div{
+    margin-bottom:10px;
+    line-height: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 180px;
+}
+.Mass-timings{
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    padding-left: 60px;
+}
+.day{
+    display:inline-block;
+    min-width:250px;
+    font-size:21px;
+    font-weight: bold;
+    padding-left: 60px;
+}
+
+.time{
+    font-size:21px;
+    font-weight:bold;
+    color: var(--c-text);
+}
+.timings-row hr{
+    opacity: 0.4;
+    flex: 0 0 100%;
+    margin: 0 0 0 60px;
+}
+
+/*Responsive*/
+@media (max-width: 1000px){
+    .image_priest{
+        display: block;
+        margin: 30px auto 0;
+        text-align: center;
+    }
+    .message{
+        display: block;
+        width: auto;
+        margin: 30px 20px 0;
+    }
+}
+
+@media (max-width: 768px){
+    /* Hide the original desktop button stacks inside the hero container */
+    .hero-container .left-buttons,
+    .hero-container .right-buttons {
+        display: none;
+    }
+
+    /* Compact 2x2 grid for mobile quick links */
+    .buttons-grid-mobile {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+        width: 95%;
+        margin: 8px auto;
+    }
+
+    /* Smaller, compact button styling for mobile grid */
+    .buttons-grid-mobile .mass-button {
+        padding: 6px 8px;
+        min-height: unset;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    }
+
+    .buttons-grid-mobile .mass-button p {
+        font-size: 11px;
+        font-weight: bold;
+        margin: 1px 0;
+    }
+
+    /* Hero container & image: expanded width and reduced top spacing to make the image look larger */
+    .hero-container {
+        display: block;
+        width: 95%;
+        margin: 6px auto 16px;
+    }
+    .hero-image {
+        width: 100%;
+    }
+    .hero-image img {
+        border-radius: 10px;
+    }
+
+    /* Other mobile section adjustments */
+    .image_priest img{
+        width: 180px;
+        height: 180px;
+    }
+    .message{
+        font-size: 18px;
+    }
+    .timings-row{
+        padding: 30px 15px;
+    }
+    .Mass-timings{
+        padding-left: 0;
+        font-size: 24px;
+    }
+    .timings-row div{
+        padding-right: 0;
+    }
+    .day{
+        min-width: 0;
+        padding-left: 0;
+        font-size: 18px;
+    }
+    .time{
+        font-size: 18px;
+    }
+    .timings-row hr{
+        margin-left: 0;
+    }
+}
+
+/*Tamil: justified text opens very wide gaps between words, so keep it left-aligned*/
+html[lang="ta"] .message{
+    text-align: left;
+}

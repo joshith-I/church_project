@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/CSS/gallery style.css">
+    <link rel="stylesheet" href="static/CSS/style.css">
+
+    <title data-i18n="title.gallery">Gallery | St. Joseph's Church, Kalimar</title>
+    <script src="static/JS/translations.js" defer></script>
+    <script src="static/JS/i18n.js" defer></script>
+</head>
+
+<body>
+    <header class="Name">
+        <div class="church-brand">
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="Church logo" data-i18n-alt="alt.logo">
+            </div>
+            <h1 data-i18n="brand.name">ST. JOSEPH'S CHURCH, KALIMAR</h1>
+        </div>
+        <nav class="navigation" aria-label="Main">
+            <a class="home" href="index.html" data-i18n="nav.home">Home</a>
+            <a class="about" href="about.html" data-i18n="nav.about">About</a>
+            <div class="dropdown">
+                <a class="councils" href="#" onclick="toggleDropdown(event)" data-i18n="nav.councils">Councils</a>
+                <div class="dropdown-content" id="councilsDropdown">
+                    <a href="movement.html" data-i18n="nav.movements">Movements</a>
+                    <a href="associations.html" data-i18n="nav.associations">Associations</a>
+                </div>
+            </div>
+            <a class="gallery" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+            <a class="contact" href="contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+    </header>
+    <main class="gallery-wrapper">
+        <div class="gallery-heading">
+            <h2 data-i18n="gallery.title">Our Gallery</h2>
+            <p data-i18n="gallery.sub">Moments and memories from our church</p>
+        </div>
+        <!-- ================= CHURCH INTERIOR ================= -->
+        <section class="gallery-section">
+            <h3 data-i18n="gallery.interior">Church Interior</h3>
+            <div class="photo-grid">
+                <img src="images/interior1.jpg" alt="Church Interior" data-i18n-alt="gallery.interior"
+                    onclick="openImage(this.src)">
+                <img src="images/interior2.jpg" alt="Church Interior" data-i18n-alt="gallery.interior"
+                    onclick="openImage(this.src)">
+                <img src="images/interior3.jpg" alt="Church Interior" data-i18n-alt="gallery.interior"
+                    onclick="openImage(this.src)">
+                <img src="images/interior4.jpg" alt="Church Interior" data-i18n-alt="gallery.interior"
+                    onclick="openImage(this.src)">
+            </div>
+        </section>
+        <!-- ================= CHURCH EXTERIOR ================= -->
+        <section class="gallery-section">
+            <h3 data-i18n="gallery.exterior">Church Exterior</h3>
+            <div class="photo-grid">
+                <img src="images/exterior1.jpg" alt="Church Exterior" data-i18n-alt="gallery.exterior"
+                    onclick="openImage(this.src)">
+                <img src="images/exterior2.jpg" alt="Church Exterior" data-i18n-alt="gallery.exterior"
+                    onclick="openImage(this.src)">
+                <img src="images/exterior3.jpg" alt="Church Exterior" data-i18n-alt="gallery.exterior"
+                    onclick="openImage(this.src)">
+                <img src="images/exterior4.jpg" alt="Church Exterior" data-i18n-alt="gallery.exterior"
+                    onclick="openImage(this.src)">
+            </div>
+        </section>
+        <!-- ================= FEAST / FESTIVAL ================= -->
+        <section class="gallery-section">
+            <h3 data-i18n="gallery.feast">Feast / Festival</h3>
+            <div class="photo-grid">
+                <img src="images/feast1.jpeg" alt="Church Feast" data-i18n-alt="alt.feast" onclick="openImage(this.src)">
+                <img src="images/feast2.jpg" alt="Church Feast" data-i18n-alt="alt.feast" onclick="openImage(this.src)">
+                <img src="images/feast3.jpg" alt="Church Feast" data-i18n-alt="alt.feast" onclick="openImage(this.src)">
+                <img src="images/feast4.jpg" alt="Church Feast" data-i18n-alt="alt.feast" onclick="openImage(this.src)">
+                <img src="images/feast5.jpg" alt="Church Feast" data-i18n-alt="alt.feast" onclick="openImage(this.src)">
+                <img src="images/feast6.jpg" alt="Church Feast" data-i18n-alt="alt.feast" onclick="openImage(this.src)">
+                <img src="images/feast7.jpg" alt="Church Feast" data-i18n-alt="alt.feast" onclick="openImage(this.src)">
+                <img src="images/feast8.jpg" alt="Church Feast" data-i18n-alt="alt.feast" onclick="openImage(this.src)">
+                <img src="images/feast9.jpg" alt="Church Feast" data-i18n-alt="alt.feast" onclick="openImage(this.src)">
+                <img src="images/feast10.jpg" alt="Church Feast" data-i18n-alt="alt.feast"
+                    onclick="openImage(this.src)">
+
+            </div>
+        </section>
+        <!-- ================= CHRISTMAS ================= -->
+        <section class="gallery-section">
+            <h3 data-i18n="gallery.christmas">Christmas</h3>
+            <div class="photo-grid">
+                <img src="images/christmas1.jpg" alt="Christmas Celebration" data-i18n-alt="alt.christmas"
+                    onclick="openImage(this.src)">
+                <img src="images/christmas2.jpg" alt="Christmas Celebration" data-i18n-alt="alt.christmas"
+                    onclick="openImage(this.src)">
+                <img src="images/christmas3.jpg" alt="Christmas Celebration" data-i18n-alt="alt.christmas"
+                    onclick="openImage(this.src)">
+                <img src="images/christmas4.jpg" alt="Christmas Celebration" data-i18n-alt="alt.christmas"
+                    onclick="openImage(this.src)">
+                <img src="images/christmas5.jpg" alt="Christmas Celebration" data-i18n-alt="alt.christmas"
+                    onclick="openImage(this.src)">
+                <img src="images/christmas6.jpg" alt="Christmas Celebration" data-i18n-alt="alt.christmas"
+                    onclick="openImage(this.src)">
+                <img src="images/christmas7.jpg" alt="Christmas Celebration" data-i18n-alt="alt.christmas"
+                    onclick="openImage(this.src)">
+                <img src="images/christmas8.jpg" alt="Christmas Celebration" data-i18n-alt="alt.christmas"
+                    onclick="openImage(this.src)">
+            </div>
+        </section>
+
+        <div id="imagePopup" class="image-popup" onclick="closeImage()" data-i18n-label="gallery.popup"
+            aria-label="Enlarged photo - press Escape to close">
+            <span class="close-popup" aria-hidden="true">&times;</span>
+            <img id="popupImage" src="" alt="Gallery Image" data-i18n-alt="alt.galleryImage">
+        </div>
+    </main>
+    <div class="footer">
+        <p data-i18n="footer.copyright">Copyright &copy; 2026 St. Joseph's Church, Kalimar. All rights reserved.</p>
+        <p><span data-i18n="footer.designed">Designed by</span> I. Joshith</p>
+        <p><span data-i18n="footer.call">Contact us at</span> +91 98422 72259</p>
+        <p><span data-i18n="footer.email">Email us at:</span> stjosephkalimar@gmail.com</p>
+    </div>
+    <script src="static/JS/script.js"></script>
+</body>
+
+</html>

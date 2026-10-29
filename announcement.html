@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title data-i18n="title.announcements">Announcements | St. Joseph's Church, Kalimar</title>
+
+    <link rel="stylesheet" href="static/CSS/style.css">
+    <link rel="stylesheet" href="static/CSS/announcements.css">
+    <script src="static/JS/translations.js" defer></script>
+    <script src="static/JS/i18n.js" defer></script>
+</head>
+
+<body>
+    <header class="Name">
+        <div class="church-brand">
+            <div class="logo">
+                <img src="images/logo.jpeg" alt="Church logo" data-i18n-alt="alt.logo">
+            </div>
+            <h1 data-i18n="brand.name">ST. JOSEPH'S CHURCH, KALIMAR</h1>
+        </div>
+        <nav class="navigation" aria-label="Main">
+            <a class="home" href="index.html" data-i18n="nav.home">Home</a>
+            <a class="about" href="about.html" data-i18n="nav.about">About</a>
+            <div class="dropdown">
+                <a class="councils" href="#" onclick="toggleDropdown(event)" data-i18n="nav.councils">Councils</a>
+                <div class="dropdown-content" id="councilsDropdown">
+                    <a href="movement.html" data-i18n="nav.movements">Movements</a>
+                    <a href="associations.html" data-i18n="nav.associations">Associations</a>
+                </div>
+            </div>
+            <a class="gallery" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+            <a class="contact" href="contact.html" data-i18n="nav.contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="announcement-page">
+        <section class="announcement-hero">
+
+
+            <h2 data-i18n="ann.hero.title">Church Announcements</h2>
+
+            <p data-i18n="ann.hero.sub">Stay informed about upcoming Masses, events and parish activities.</p>
+        </section>
+
+        <section class="announcement-section">
+            <div class="announcement-heading">
+                <div>
+                    <h2 data-i18n="ann.latest">Latest Notices</h2>
+                    <p id="noticeCount" aria-live="polite"></p>
+                </div>
+            </div>
+
+            <div class="announcement-filters">
+                <label class="sr-only" for="categoryFilter" data-i18n="ann.filter">Filter announcements</label>
+
+                <select id="categoryFilter">
+                    <option value="all" data-i18n="ann.cat.all">All announcements</option>
+                    <option value="mass" data-i18n="ann.cat.mass">Mass &amp; Prayer</option>
+                    <option value="event" data-i18n="ann.cat.event">Events &amp; Feasts</option>
+                    <option value="meeting" data-i18n="ann.cat.meeting">Meetings</option>
+                    <option value="general" data-i18n="ann.cat.general">General Notices</option>
+                </select>
+            </div>
+
+            <div id="announcementList" class="announcement-grid" aria-live="polite"></div>
+
+            <p id="emptyMessage" class="empty-message" hidden data-i18n="ann.empty">There are no current announcements.
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><span data-i18n="footer.call">Contact us at</span> +91 98422 72259</p>
+        <p><span data-i18n="footer.email">Email us at:</span> stjosephkalimar@gmail.com</p>
+        <p data-i18n="footer.copyright">Copyright &copy; 2026 St. Joseph's Church, Kalimar. All rights reserved.</p>
+    </footer>
+
+    <script src="static/JS/script.js"></script>
+    <script src="static/JS/announcements.js" defer></script>
+</body>
+
+</html>
