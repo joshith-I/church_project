@@ -150,7 +150,11 @@ window.CHURCH_TRANSLATIONS = {
     "youth.mission": "Mission",
     "youth.missionBody": "The mission of the Youth Movement is to nurture young people in Christian faith and values while helping them develop positive attitudes towards God, others, and society.",
     "youth.vision": "Vision",
-    "youth.visionBody": "The Youth Movement envisions a generation of young adults who grow with a strong foundation in faith, compassion, discipline, and love for others."
+    "youth.visionBody": "The Youth Movement envisions a generation of young adults who grow with a strong foundation in faith, compassion, discipline, and love for others.",
+
+    "ycs_title": "Young Christian Students(YCS) Movement",
+    "ycs.aboutTitle": "About the movement",
+    "ycs.aboutBody": "The Young Christian Students (YCS) of St. Joseph Church, Kalimar, is a movement that brings together young Christian students of the parish to grow in faith, develop a sense of responsibility, and respond positively to the needs of others. Through fellowship, awareness, and service, YCS encourages students to live their Christian values in their daily lives and to contribute meaningfully to their parish, school, and community."
   },
 
   ta: {
@@ -212,7 +216,7 @@ window.CHURCH_TRANSLATIONS = {
     "about.stat.families": "குடும்பங்கள்",
     "about.stat.aboutLabel": "சுமார்",
     "about.stat.years": "50 ஆண்டுகள்",
-    "about.stat.daysLabel": "நாட்களும் திறந்அருட்தந்தைக்கும்",
+    "about.stat.daysLabel": "நாட்களும் திறந்திருக்கும் ",
 
     "movements.title": "எங்கள் ஆலயத்தின் இயக்கங்கள்",
     "movements.youth": "இளைஞர் இயக்கம்",
