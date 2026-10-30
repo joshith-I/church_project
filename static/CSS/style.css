@@ -1,6 +1,8 @@
 /* Colour tokens - the one place the site's palette is defined */
 :root{
     --c-blue: #1e3a5f;        /* Sanctuary Blue: header, footer, contact strip */
+    --c-blue2:#1B365D;
+    
     --c-blue-deep: #081d39;   /* hover state on blue panels */
     --c-gold: #c59b27;        /* muted gold: title, links on blue, focus ring */
     --c-gold-bright: gold;    /* bright gold: buttons, timings band */
