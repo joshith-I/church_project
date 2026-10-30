@@ -67,7 +67,7 @@ div.about h1, .about2 h1, .about3 h1, .about4 h1{
 
 /*Information*/
 .info-section{
-    background-color: var(--c-red);
+    background-color: var(--c-blue2);
     border: 3px solid var(--c-goldenrod);
     display: flex;
     justify-content: space-around;
