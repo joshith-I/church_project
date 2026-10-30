@@ -1,5 +1,7 @@
 // Dropdown Toggle Function
 // (previously defined twice - the first copy also re-assigned window.onclick on every click; merged into one)
+const CHURCH_EMAIL = "stjosephchurchkalimar@gmail.com";
+
 function toggleDropdown(event) {
     event.preventDefault();
     event.stopPropagation();
