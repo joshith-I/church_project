@@ -149,6 +149,43 @@
     margin: 0 0 0 60px;
 }
 
+/* Wednesday timings layout */
+
+.timings-row .wednesday-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 20px;
+    padding-right: 180px;
+}
+
+.wednesday-days {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.wednesday-days .day {
+    display: block;
+    min-width: 0;
+}
+
+.timings-row .wednesday-row .time {
+    white-space: nowrap;
+    align-self: center;
+}
+
+.timings-row .wednesday-row hr {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+.bracket-text {
+    color: #89552E !important;
+    font-weight: normal;
+}
+
+
 /*Responsive*/
 @media (max-width: 1000px){
     .image_priest{
@@ -236,7 +273,38 @@
     .timings-row hr{
         margin-left: 0;
     }
+
+    /* Wednesday row: override the 180px desktop padding that specificity was blocking */
+    .timings-row .wednesday-row {
+        padding-right: 0;
+        column-gap: 12px;
+        align-items: center;
+    }
+
+    /* Stack day name and bracket text on separate lines */
+    .wednesday-days .day {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        margin-bottom: 8px;
+    }
+
+    /* Bracket text: smaller, block, wraps cleanly */
+    .bracket-text {
+        display: block;
+        font-size: 14px;
+        line-height: 1.4;
+        word-break: break-word;
+    }
+
+    /* Align the time to the middle of the full wednesday block */
+    .timings-row .wednesday-row .time {
+        align-self: center;
+        padding-top: 0;
+    }
 }
+
+
 
 /*Tamil: justified text opens very wide gaps between words, so keep it left-aligned*/
 html[lang="ta"] .message{
