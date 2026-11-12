@@ -43,11 +43,18 @@
     function translateDom(root) {
         root = root || document;
         root.querySelectorAll("[data-i18n]").forEach(function (el) {
-            el.textContent = t(el.getAttribute("data-i18n"));
+            var key = el.getAttribute("data-i18n");
+            var text = t(key);
+            // If a translation key is missing (for example, because an older
+            // translations.js is cached), keep the HTML fallback instead of
+            // replacing useful text with the raw key name.
+            if (text !== key) el.textContent = text;
         });
         ATTRS.forEach(function (pair) {
             root.querySelectorAll("[" + pair[0] + "]").forEach(function (el) {
-                el.setAttribute(pair[1], t(el.getAttribute(pair[0])));
+                var key = el.getAttribute(pair[0]);
+                var text = t(key);
+                if (text !== key) el.setAttribute(pair[1], text);
             });
         });
     }
